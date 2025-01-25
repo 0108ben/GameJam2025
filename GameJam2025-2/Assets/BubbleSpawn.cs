@@ -17,7 +17,7 @@ public class BubbleSpawn : MonoBehaviour
     void Update()
     {
         spawnCounter++;
-        if (spawnCounter >= 700)
+        if (spawnCounter >= 1200)
         {
             Spawn();
             spawnCounter = 0;
