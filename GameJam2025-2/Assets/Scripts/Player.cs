@@ -10,13 +10,12 @@ public class Player : MonoBehaviour
     BoxCollider2D playerCollider;
 
     [SerializeField]
-    GameObject floor;
-    BoxCollider2D floorCollider;
+    GameObject[] floor;
 
     [SerializeField]
     float acceleration = 3.5f;
     [SerializeField]
-    float jumpPower = 0.5f;
+    float jumpPower = 0.05f;
     Vector2 jump = new Vector2(0, 2);
 
     bool isGrounded = false;
@@ -25,16 +24,20 @@ public class Player : MonoBehaviour
     void Start()
     {
         playerCollider = player.GetComponent<BoxCollider2D>();
-        floorCollider = floor.GetComponent<BoxCollider2D>();
+        floor = GameObject.FindGameObjectsWithTag("Ground");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerCollider.IsTouching(floorCollider))
+        for (int i = 0; i < floor.Length; i++)
         {
-            isGrounded = true;
+            if (playerCollider.IsTouching(floor[i].GetComponent<BoxCollider2D>()))
+            {
+                isGrounded = true;
+            }
         }
+
 
 
         if (Input.GetKey(KeyCode.A))
