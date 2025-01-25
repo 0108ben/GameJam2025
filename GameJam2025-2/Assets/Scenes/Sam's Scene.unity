@@ -214,7 +214,7 @@ MonoBehaviour:
   player: {fileID: 150124002}
   floor: []
   acceleration: 3.5
-  jumpPower: 0.2
+  jumpPower: 3
 --- !u!212 &150124004
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -20,7 +20,8 @@ public class BubbleCollision : MonoBehaviour
             {
                 Player.transform.position = this.gameObject.transform.position;
             }
-            
+            Player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+
         }
         
     }

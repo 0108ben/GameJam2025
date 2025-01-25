@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     GameObject player;
     BoxCollider2D playerCollider;
+    Rigidbody2D playerRigidBody;
 
     [SerializeField]
     GameObject[] floor;
@@ -24,7 +25,9 @@ public class Player : MonoBehaviour
     void Start()
     {
         playerCollider = player.GetComponent<BoxCollider2D>();
+        playerRigidBody = player.GetComponent<Rigidbody2D>();
         floor = GameObject.FindGameObjectsWithTag("Ground");
+
     }
 
     // Update is called once per frame
@@ -34,6 +37,7 @@ public class Player : MonoBehaviour
         {
             if (playerCollider.IsTouching(floor[i].GetComponent<BoxCollider2D>()))
             {
+                playerRigidBody.velocity = Vector2.zero;
                 isGrounded = true;
             }
         }
