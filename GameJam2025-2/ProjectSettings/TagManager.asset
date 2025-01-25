@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DeSpawn
   - Ground
+  - anything
   layers:
   - Default
   - TransparentFX

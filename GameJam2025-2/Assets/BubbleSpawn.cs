@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BubbleSpawn : MonoBehaviour
 {
+    [SerializeField]
+    public Vector2 SpawnPosition = new Vector2();
     public GameObject BubblePreFab;
     public int spawnCounter = 0;
     // Start is called before the first frame update
@@ -27,13 +29,13 @@ public class BubbleSpawn : MonoBehaviour
 
     public void Spawn()
     {
-        Vector3 SpawnPos = new Vector3(0, -10, 0);
+        
         GameObject Bubble = PoolManager.instance.GetPooledObject();
 
 
         if (Bubble != null)
         {
-            Bubble.transform.position = SpawnPos;
+            Bubble.transform.position = SpawnPosition;
             Bubble.gameObject.SetActive(true);
         }
     }
