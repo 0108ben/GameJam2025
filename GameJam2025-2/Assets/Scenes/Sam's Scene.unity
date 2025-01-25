@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 129309558}
   m_Layer: 0
   m_Name: PoolManager
-  m_TagString: Untagged
+  m_TagString: anything
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ecee8d24a5d4146b71a209abb5ce2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnPosition: {x: 0, y: -10}
   BubblePreFab: {fileID: 2541619843829318936, guid: be98ba9e8c870054da2cf1e658377ce8, type: 3}
   spawnCounter: 0
 --- !u!1 &150124002
