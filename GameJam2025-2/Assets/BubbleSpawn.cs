@@ -8,6 +8,9 @@ public class BubbleSpawn : MonoBehaviour
     public Vector2 SpawnPosition = new Vector2();
     public GameObject BubblePreFab;
     public int spawnCounter = 0;
+    [SerializeField]
+    float despawnHeight = 1453.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,9 +35,9 @@ public class BubbleSpawn : MonoBehaviour
         
         GameObject Bubble = PoolManager.instance.GetPooledObject();
 
-
         if (Bubble != null)
         {
+            Bubble.GetComponent<BubbleMovement>().despawnHeight = despawnHeight;
             Bubble.transform.position = SpawnPosition;
             Bubble.gameObject.SetActive(true);
         }

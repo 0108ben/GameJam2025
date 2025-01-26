@@ -9,6 +9,7 @@ public class BubbleMovement : MonoBehaviour
     BubbleSpawn bubbleSpawner; 
     int spawnCounter = 0;
     public float y;
+    public float despawnHeight;
     
     //public GameObject DeSpawner;
     // Start is called before the first frame update
@@ -27,7 +28,7 @@ public class BubbleMovement : MonoBehaviour
 
         y++;
 
-        if (y >= 1453.5F)
+        if (y >= despawnHeight)
         {
             BubblePreFab.SetActive(false);
             y = -10;
