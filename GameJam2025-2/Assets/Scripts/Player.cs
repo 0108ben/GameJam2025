@@ -39,6 +39,11 @@ public class Player : MonoBehaviour
     {
         lives.text = string.Format($"Lives: {Lives}");
 
+        if(Lives < 1)
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
 
 
         for (int i = 0; i < floor.Length; i++)
