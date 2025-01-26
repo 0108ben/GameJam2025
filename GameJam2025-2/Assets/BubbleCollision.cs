@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BubbleCollision : MonoBehaviour
@@ -19,6 +20,11 @@ public class BubbleCollision : MonoBehaviour
             if (!Input.GetKey(KeyCode.Space))
             {
                 Player.transform.position = this.gameObject.transform.position;
+            }
+            else
+            {
+                this.gameObject.GetComponent<BubbleMovement>().y = -10;
+                this.gameObject.SetActive(false);
             }
             Player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
 
