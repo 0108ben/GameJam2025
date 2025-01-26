@@ -17,8 +17,8 @@ public class BubbleMovement : MonoBehaviour
     void Awake()
     {
         PoolManager = GameObject.FindGameObjectWithTag("anything");
+        Despawner = PoolManager.GetComponent<BubbleSpawn>().Despawner;
         bubbleSpawner = PoolManager.GetComponent<BubbleSpawn>();
-        Despawner = bubbleSpawner.Despawner;
         BubblePreFab.transform.position = bubbleSpawner.SpawnPosition;
     }
 
