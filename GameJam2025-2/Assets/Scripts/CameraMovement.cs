@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraMovement : MonoBehaviour
 {
@@ -19,5 +20,11 @@ public class CameraMovement : MonoBehaviour
     void Update()
     {
         camera.transform.position = player.transform.position + new Vector3(0, 1, 0);
+
+
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 }
