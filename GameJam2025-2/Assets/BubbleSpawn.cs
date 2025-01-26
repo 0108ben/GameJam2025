@@ -10,6 +10,8 @@ public class BubbleSpawn : MonoBehaviour
     public int spawnCounter = 0;
     [SerializeField]
     float despawnHeight = 1453.5f;
+    [SerializeField]
+    float spawnTime = 1200;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,7 @@ public class BubbleSpawn : MonoBehaviour
     void Update()
     {
         spawnCounter++;
-        if (spawnCounter >= 1200)
+        if (spawnCounter >= spawnTime)
         {
             Spawn();
             spawnCounter = 0;
