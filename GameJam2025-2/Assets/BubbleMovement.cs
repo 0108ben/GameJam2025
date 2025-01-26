@@ -9,6 +9,7 @@ public class BubbleMovement : MonoBehaviour
     BubbleSpawn bubbleSpawner; 
     int spawnCounter = 0;
     public float y;
+    public float timer;
     public float despawnHeight;
     
     //public GameObject DeSpawner;
@@ -18,24 +19,26 @@ public class BubbleMovement : MonoBehaviour
         PoolManager = GameObject.FindGameObjectWithTag("anything");
         bubbleSpawner = PoolManager.GetComponent<BubbleSpawn>();
         BubblePreFab.transform.position = bubbleSpawner.SpawnPosition;
-        y = BubblePreFab.transform.position.y;
+        //y = BubblePreFab.transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
-        BubblePreFab.transform.position = new Vector2(BubblePreFab.transform.position.x , y/30);
+       // BubblePreFab.transform.position = new Vector2(BubblePreFab.transform.position.x , y/150);
 
-        y++;
+        //y+= Time.deltaTime;
+        timer += Time.deltaTime;
 
-        if (y >= despawnHeight)
+        if (timer >= despawnHeight)
         {
             BubblePreFab.SetActive(false);
-            y = -10;
+            //y = -10;
+            timer = 0;
         }
         if (!BubblePreFab.activeSelf)
         {
-            y = -10;
+            //y = -10;
         }
     }
 }

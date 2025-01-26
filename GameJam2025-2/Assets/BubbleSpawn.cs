@@ -7,7 +7,7 @@ public class BubbleSpawn : MonoBehaviour
     [SerializeField]
     public Vector2 SpawnPosition = new Vector2();
     public GameObject BubblePreFab;
-    public int spawnCounter = 0;
+    public float spawnCounter = 0;
     [SerializeField]
     float despawnHeight = 1453.5f;
     [SerializeField]
@@ -23,7 +23,7 @@ public class BubbleSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        spawnCounter++;
+        spawnCounter += Time.deltaTime;
         if (spawnCounter >= spawnTime)
         {
             Spawn();
