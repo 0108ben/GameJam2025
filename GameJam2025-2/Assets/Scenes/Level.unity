@@ -445,7 +445,7 @@ GameObject:
   - component: {fileID: 172098776}
   m_Layer: 0
   m_Name: Square (14)
-  m_TagString: anything
+  m_TagString: Slide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3323,7 +3323,7 @@ GameObject:
   - component: {fileID: 1026642109}
   m_Layer: 0
   m_Name: Die (1)
-  m_TagString: anything
+  m_TagString: Slide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5021,7 +5021,7 @@ GameObject:
   - component: {fileID: 1657053158}
   m_Layer: 0
   m_Name: Square (15)
-  m_TagString: anything
+  m_TagString: Slide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
