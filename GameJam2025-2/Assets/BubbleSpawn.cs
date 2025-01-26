@@ -11,7 +11,7 @@ public class BubbleSpawn : MonoBehaviour
     [SerializeField]
     float despawnHeight = 1453.5f;
     [SerializeField]
-    float spawnTime = 1200;
+    float spawnTime = 400;
 
     // Start is called before the first frame update
     void Start()

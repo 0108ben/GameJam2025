@@ -24,7 +24,7 @@ public class BubbleMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        BubblePreFab.transform.position = new Vector2(BubblePreFab.transform.position.x , y/150);
+        BubblePreFab.transform.position = new Vector2(BubblePreFab.transform.position.x , y/30);
 
         y++;
 
