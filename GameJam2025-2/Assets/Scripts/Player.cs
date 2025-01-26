@@ -75,5 +75,12 @@ public class Player : MonoBehaviour
             gameObject.transform.position = new Vector2(-1.7F, 0.47F);
             Lives -= 1;
         }
+
+        print(collision.gameObject.tag);
+
+        if (collision.gameObject.CompareTag("Win"))
+        {
+            SceneManager.LoadScene("WIN");
+        }
     }
 }

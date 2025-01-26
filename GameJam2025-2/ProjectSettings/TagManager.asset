@@ -9,6 +9,8 @@ TagManager:
   - anything
   - Restart
   - Slide
+  - Background
+  - Win
   layers:
   - Default
   - TransparentFX
