@@ -7,6 +7,7 @@ public class BubbleMovement : MonoBehaviour
     public GameObject PoolManager;
     public GameObject BubblePreFab;
     Rigidbody2D bubbleRigidbody2D;
+    public GameObject Despawner;
     BubbleSpawn bubbleSpawner; 
     int spawnCounter = 0;
     public float timer;
@@ -14,10 +15,11 @@ public class BubbleMovement : MonoBehaviour
     
     //public GameObject DeSpawner;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         PoolManager = GameObject.FindGameObjectWithTag("anything");
         bubbleSpawner = PoolManager.GetComponent<BubbleSpawn>();
+        Despawner = bubbleSpawner.Despawner;
         BubblePreFab.transform.position = bubbleSpawner.SpawnPosition;
         bubbleRigidbody2D = BubblePreFab.GetComponent<Rigidbody2D>();
     }
@@ -25,13 +27,16 @@ public class BubbleMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
         bubbleRigidbody2D.gravityScale = -0.5f;
+    }
 
-        if (timer >= despawnHeight)
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        print(collision);
+        if (collision.gameObject.CompareTag("DeSpawn"))
         {
+            bubbleRigidbody2D.velocity = Vector3.zero;
             BubblePreFab.SetActive(false);
-            timer = 0;
         }
     }
 }

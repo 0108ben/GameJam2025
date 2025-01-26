@@ -25,7 +25,6 @@ public class PoolManager : MonoBehaviour
         {
             GameObject obj = Instantiate(cubePrefab);
             obj.SetActive(false);
-            //obj.transform.position = new Vector2(0, -10);
             pooledMetal.Add(obj); //Add all pooledObjects to list
         }
 

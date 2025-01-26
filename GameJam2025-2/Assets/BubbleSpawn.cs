@@ -7,11 +7,13 @@ public class BubbleSpawn : MonoBehaviour
     [SerializeField]
     public Vector2 SpawnPosition = new Vector2();
     public GameObject BubblePreFab;
+    public GameObject Despawner;
     public float spawnCounter = 0;
     [SerializeField]
     float despawnHeight = 4;
     [SerializeField]
     float spawnTime = 2;
+
 
     // Update is called once per frame
     void Update()
@@ -33,6 +35,7 @@ public class BubbleSpawn : MonoBehaviour
         if (Bubble != null)
         {
             Bubble.GetComponent<BubbleMovement>().despawnHeight = despawnHeight;
+            Bubble.GetComponent<BubbleMovement>().Despawner = Despawner;
             Bubble.transform.position = SpawnPosition;
             Bubble.gameObject.SetActive(true);
         }
