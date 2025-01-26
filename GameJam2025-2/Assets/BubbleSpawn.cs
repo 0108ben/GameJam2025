@@ -9,16 +9,9 @@ public class BubbleSpawn : MonoBehaviour
     public GameObject BubblePreFab;
     public float spawnCounter = 0;
     [SerializeField]
-    float despawnHeight = 1453.5f;
+    float despawnHeight = 4;
     [SerializeField]
-    float spawnTime = 400;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-        
-    }
+    float spawnTime = 2;
 
     // Update is called once per frame
     void Update()

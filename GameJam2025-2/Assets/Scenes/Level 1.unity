@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 129309559}
   m_Layer: 0
   m_Name: PoolManager
-  m_TagString: Untagged
+  m_TagString: anything
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,8 +181,8 @@ MonoBehaviour:
   SpawnPosition: {x: 0, y: 0}
   BubblePreFab: {fileID: 2541619843829318936, guid: be98ba9e8c870054da2cf1e658377ce8, type: 3}
   spawnCounter: 0
-  despawnHeight: 1453.5
-  spawnTime: 1200
+  despawnHeight: 4
+  spawnTime: 3.8
 --- !u!114 &129309559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,8 +198,8 @@ MonoBehaviour:
   SpawnPosition: {x: -10, y: 0}
   BubblePreFab: {fileID: 2541619843829318936, guid: be98ba9e8c870054da2cf1e658377ce8, type: 3}
   spawnCounter: 0
-  despawnHeight: 2235
-  spawnTime: 700
+  despawnHeight: 8
+  spawnTime: 2
 --- !u!1 &150124002
 GameObject:
   m_ObjectHideFlags: 0

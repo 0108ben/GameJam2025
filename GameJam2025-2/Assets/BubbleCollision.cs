@@ -23,7 +23,6 @@ public class BubbleCollision : MonoBehaviour
             }
             else
             {
-                this.gameObject.GetComponent<BubbleMovement>().y = -10;
                 this.gameObject.SetActive(false);
             }
             Player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
